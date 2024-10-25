@@ -1,0 +1,373 @@
+---
+id: get-multiple-cards
+title: "Get multiple cards"
+description: "Get one or more cards based on more broad metadata. For values with spaces or other special characters in them, you're able to just pass it in normally or URL-encoded. For example, the following queries will return the same data."
+sidebar_label: "Get multiple cards"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "get api-method"
+info_path: pokemon-api/1.0/jpn-api-reference
+custom_edit_url: null
+hide_send_button: true
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get multiple cards"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/card/?name={name}&set_id={set_id}&illustrator={illustrator}&type={type}&p_no={p_no}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get one or more cards based on more broad metadata. For values with spaces or other special characters in them, you're able to just pass it in normally or URL-encoded. For example, the following queries will return the same data.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"name","in":"path","description":"string name of the card","required":false,"example":"Clefable","schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"set_id","in":"path","description":"integer id of the set the card is in","required":false,"example":10,"schema":{"type":"integer"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"illustrator","in":"path","description":"string name of the illustrator/artist","required":false,"example":"Shigenori%20Negishi","schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"type","in":"path","description":"the pokemon's type","required":false,"example":"Fighting","schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"p_no","in":"path","description":"string printed number","required":false,"example":"20","schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <li>
+                        <div
+                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                        >
+                          Array [
+                        </div>
+                      </li><SchemaItem
+                        collapsible={false}
+                        name={"id"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":267}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"setId"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":4}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"name"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Eelektross","description":"The name of the card."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"sequenceNumber"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":34,"description":"The sequential number of the card (applicable to Secret Rares)."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"printedNumber"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"34","description":"The number printed on the card, will be the same as sequenceNumber almost always. Is relevant for Promotional cards such as SWSH001"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"imageUrl"}
+                        required={false}
+                        schemaName={"url"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","format":"url","example":"https://content.tcgcollector.com/content/images/c9/79/fd/c979fde3902d4f4bf01de14245acd37f8bf2949fba61265f3950f0b7a22a6988.jpg","description":"The url pointing to the card's image. If there is no card image, then this will instead point to https://assets.tcgcollector.com/build/images/default-card-image.789f6232.png."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"hp"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":160,"description":"The amount of HP the card has. If it does not have hp, then the value will be -1."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"evolvesFrom"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Eelektrik","description":"If the card evolves from another card, this field will denote the name of the pre-evolution."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"effect"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"None","description":"Describes the card's effect. Mainly for Trainers and Special Energies."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"attacks"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Lightning/Upper Shock/40\r\nIf this Pokémon evolved from Eelektrik during this turn, your opponent`s Active Pokémon is now Paralyzed.\r\nLightning-Colorless-Colorless/Wild Charge/160\r\nThis Pokémon also does 30 damage to itself.","description":"Unparsed string describing all attacks the card has. Includes energy cost, attack name, attack damage, and any description or further effects."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"rules"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"None","description":"Describes rules the card is bound to. Mainly for cards with a Rule Box and certain Trainers."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"weakness"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Fighting","description":"The type of energy the card is weak to. Does not include weakness modifier, only the type."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"resistance"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"None","description":"The type of energy the card is resistant to. Does not include resistance modifier, only the type."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"retreatCost"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Colorless-Colorless-Colorless","description":"The amount of energy required to retreat."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"cardType"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Pokémon","description":"The subset that the card falls into. For example, Single Strike Pokemon, Pokemon VMAX, etc."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"rarity"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"U","description":"The rarity of the card."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"cardFormat"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"None"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"illustrator"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"OKACHEKE","description":"The card art's illustrator."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"cardUrl"}
+                        required={false}
+                        schemaName={"url"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","format":"url","example":"https://www.tcgcollector.com/cards/34489/eelektross-eevee-heroes-034-069","description":"The URL which leads to the original card URL data."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"setName"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Eevee Heroes","description":"The name of the set which the card belongs to."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"type"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Lightning","description":"The energy type the card is."}}
+                      >
+                        
+                      </SchemaItem><li>
+                        <div
+                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                        >
+                          ]
+                        </div>
+                      </li>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"[\n  {\n    \"id\": 267,\n    \"setId\": 4,\n    \"name\": \"Eelektross\",\n    \"sequenceNumber\": 34,\n    \"printedNumber\": \"34\",\n    \"imageUrl\": \"https://content.tcgcollector.com/content/images/c9/79/fd/c979fde3902d4f4bf01de14245acd37f8bf2949fba61265f3950f0b7a22a6988.jpg\",\n    \"hp\": 160,\n    \"evolvesFrom\": \"Eelektrik\",\n    \"effect\": \"None\",\n    \"attacks\": \"Lightning/Upper Shock/40\\r\\nIf this Pokémon evolved from Eelektrik during this turn, your opponent`s Active Pokémon is now Paralyzed.\\r\\nLightning-Colorless-Colorless/Wild Charge/160\\r\\nThis Pokémon also does 30 damage to itself.\",\n    \"rules\": \"None\",\n    \"weakness\": \"Fighting\",\n    \"resistance\": \"None\",\n    \"retreatCost\": \"Colorless-Colorless-Colorless\",\n    \"cardType\": \"Pokémon\",\n    \"rarity\": \"U\",\n    \"cardFormat\": \"None\",\n    \"illustrator\": \"OKACHEKE\",\n    \"cardUrl\": \"https://www.tcgcollector.com/cards/34489/eelektross-eevee-heroes-034-069\",\n    \"setName\": \"Eevee Heroes\",\n    \"type\": \"Lightning\"\n  }\n]"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

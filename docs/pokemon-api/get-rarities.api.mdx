@@ -1,0 +1,140 @@
+---
+id: get-rarities
+title: "Get all rarities"
+description: "Get all card rarities"
+sidebar_label: "Get all rarities"
+hide_title: true
+hide_table_of_contents: true
+api: eJx1U1Fv4jAM/itRnllBPPJ00x1iu0OAYDudNPHgtYZm1yY5J4VVVf/72QVGt2l9SWN/tj87nxvtPBJE4+x9pid6j3ENZKLBoAc6w5CS8eJl3wyjgqJQKVCm6IoiDN7ZwP+TRo9HIzneRy5/MSx1NqKN4gXvC5N2VYcvQSCNDmmOJchfrD1yEBBBzXEmYhl69hDJ2D078BVKX7DpSc+ns+niB9tWZEKpuAXkS+9Qm9zYU9im4o4vkMciElwu33MgSOPVu3D2LcGdK5ya/07+SApOVl9O9S5hkiR623bfQEfYB6G3jDmS3g50iTF35zkz2EPM+TLsDTMgHZAkqtEVFezNY/RhMhwej8fkxdsbGX9IUlcOD+NPbzQ3B9QtVzJ257qhmSgj0j9Xi5vb1b1a4w4JbSpcpVAXNj69DvcuIRbKfgS35x0J3RMfyEpjv/WZ6PYjjXEyuuMyA1W7Sh0Ni2ZnbNaph0ehLKYYAlCthCaVnRJUdHzl6TMNjom5chUpX0AUiPLk9gSlYFPOU6sq8Ht26dbTzYNiqolacoRwZoA7BpXhAQsReJDkkEpVdeBhuyooli0XYJPi2v1SifTjXYgl2N48LvKnL/ajuSr8y1U5SzjiaxxyOWOlVDfW5iyGJ/0G51fMmYXYmuYZAj5S0bZi/lch1WznX+kGnrst2HKuHCFjqYl6/iJD9C037eXxDlBU3Vp93L22r8vZ9EG37X8cNmJw
+sidebar_class_name: "get api-method"
+info_path: pokemon-api/jpn-api-reference
+custom_edit_url: null
+hide_send_button: true
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get all rarities"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/rarities"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get all card rarities
+
+<div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <li>
+                        <div
+                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                        >
+                          Array [
+                        </div>
+                      </li><div
+                        style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                      >
+                        
+                        
+                        string
+                        
+                        
+                      </div><li>
+                        <div
+                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                        >
+                          ]
+                        </div>
+                      </li>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"[\n  [\n    \"LEGEND\",\n    \"Prism Rare\",\n    \"Rare\",\n    \"Rare Shining\",\n    \"Super Rare\",\n    \"Ultra Rare\",\n    \"Character Rare\",\n    \"None\",\n    \"Rare Holo LV.X\",\n    \"Shiny\",\n    \"Shiny Super Rare\",\n    \"...\"\n  ]\n]"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

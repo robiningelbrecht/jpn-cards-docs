@@ -1,0 +1,233 @@
+---
+id: get-set
+title: "Get a set"
+description: "Get a single set's information based on its unique identifier."
+sidebar_label: "Get a set"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVk1v2zgQ/SuELrsLJFbsNv46NQsU3e4WbWC7p6IHmhpZTCRSJam4huH/vm8keVeCleTQXEwN5+Nx+OYxx8iW5GTQ1nxMomW0o7CmEF1FCXnldMkbMH+gIKTw2uxyEp7Cb15ok1pX1JFiKz0lAgsdvKiM/lGR0AmZoFNNboR0jnxpjScfLY/R5OaGf/olvvwDN2VNQBjvyrLMtarzxw+eXY6RVxkVklfhUBKC7PaBFMMtHZ8j6KaATjo+Gil35OBEP2VR5rCNT1eRkQV1vHxwOF3XKfozxzHWjwexDo5kcdGUTUaCswibipDVfRlFyHwg6V7O/NkaGkzHoedcYi+9cJQTN7dOHGyQ+csnW9wMpa0DhamKLTlGq6RL+AZ7sEvH+ZLN60Wms8FWPJsevzII7UVbgpnCW+w3EpsMO4lOU3JepM4W5zCQrAGOTPj0Yq9DJtakHFKupGsS+Bp8Ls2ukrtXbvTv+8+DbT9HN0DP0HpH4HJn+NrUNWH+6vKhis1kwFJhvwsgC6H0yzje7/ejoHbK5jn4a91I2SKua8YPZbwF8a794+HaP0+8r6tP6A6GsmTc+0yrTGQgTGEBtDubcmur0Lton1mHg5rk5Wb5mRus/F+4UDYhgUq97Lp45hpebUo7/AONaTbiOrWP5ZtYqXgyw0KpyezteKzG6Xg7X8wmczmeLJTCd6q2aiKni/n89nZ7u5hO38xuFU3H8maymKvZLEnfzkdlDax/xLtza/lQNk210qBgq3kMAKfkWdShBn9vH6mwhkXzxH/YkTuI0LeITd8xVtJBIwLIDeOxlR1WKLSK65UyZIN91klPWFhDf1TaEa4tuIq6cnZ1qYznsT2dgAH1M9vKO4sll1xGMfLGR52cIuayezpD5PvpU/WhNNfNrOE6LsB+0k8UcRmmXQ2h7Q3G7fru/qNYEWabjGLN4yp12LhRe6lqtW/bco5YV2UJlsG/ASOTQpt3XRhMtT6Mv1DjShxsBZ3Ic5FqMFRiwR00pMh76Q690cAlc5scMDTaYisnylwGdsG02x2ujn0V8hxExe9fnW71fr0RwDkSXxDBgOFg95AxeqKcXyJfD6fiquJJOm0r1nKPAjCx/nVLNfJrfSik6TSjfXQvn+Pj/+/kr7/MLV8C/QwxAIGTp7brx5Yo36IGwxKkxS1nAMrG45GTQwFPJzYjszvAjiUfWG6ZAmBToj2vwb5U5p5eOMrvq5bgf4hB/g8ibY3SHJhcEsqJLywf6dCM2ek7vDKSCYaB8TQbd7iaMnRCLv7d6M3Nh/cbTNK/KMAf0w==
+sidebar_class_name: "get api-method"
+info_path: pokemon-api/1.0/jpn-api-reference
+custom_edit_url: null
+hide_send_button: true
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a set"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/set/{id}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a single set's information based on its unique identifier.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"id","in":"path","description":"The id of the set.","required":true,"example":1,"schema":{"type":"integer"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"id"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"name"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Blue Sky Stream","description":"The name of the set."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"year"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"None","description":"The year the set was released."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"total"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":90,"description":"The total number of cards in the set."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"printedTotal"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":67,"description":"The number of cards in the set that is printed on the card. This differs from the set's total in sets with Secret Rare cards."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"language"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"JPN","description":"The language that the cards in the set are printed in."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"setUrl"}
+                        required={false}
+                        schemaName={"url"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","format":"url","example":"https://www.tcgcollector.com/cards/jp/blue-sky-stream","description":"The URL to a page which has more information about the set."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"shorthand"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"s7r","description":"The shorthand code for the set."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"image"}
+                        required={false}
+                        schemaName={"url"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","format":"url","example":"https://content.tcgcollector.com/content/images/a3/cc/27/a3cc27411c1f1b89728a129ccc1ffcbc2a698855b5966375ce61a0298c77df48.png","description":"A URL to the official set's image."}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"id\": 1,\n  \"name\": \"Blue Sky Stream\",\n  \"year\": \"None\",\n  \"total\": 90,\n  \"printedTotal\": 67,\n  \"language\": \"JPN\",\n  \"setUrl\": \"https://www.tcgcollector.com/cards/jp/blue-sky-stream\",\n  \"shorthand\": \"s7r\",\n  \"image\": \"https://content.tcgcollector.com/content/images/a3/cc/27/a3cc27411c1f1b89728a129ccc1ffcbc2a698855b5966375ce61a0298c77df48.png\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

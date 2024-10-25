@@ -1,0 +1,495 @@
+openapi: 3.0.3
+info:
+  title: JPN-API Reference
+  version: 2.0
+  contact:
+    name: JPN-API Support
+    url: admin@jpn-cards.co
+  description: >-
+    2.0Here, you will find all the necessary information to interact with our
+    platform programmatically using the REST API. Our API allows developers to
+    access various resources on our platform.
+servers:
+  -
+    url: https://www.jpn-cards.com/v2
+    description: Live
+paths:
+  /card/id={id}:
+    get:
+      summary: Get a card
+      operationId: getCard
+      description: Get a single card's information based on its unique identifier.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCards'
+      tags:
+        - Cards
+      parameters:
+        - name: id
+          in: path
+          description: The id of the card.
+          required: true
+          example: 267
+          schema:
+            type: integer
+  /card/?name={name}&set_id={set_id}&illustrator={illustrator}&type={type}&p_no={p_no}&uuid={uuid}&rarity={rarity}&subtype={subtype}&type={type}&set_code={set_code}:
+    get:
+      summary: Get multiple cards
+      operationId: getMultipleCards
+      description: >-
+        Get one or more cards based on more broad metadata.
+        For values with spaces or other special characters in them, you're able to just pass it in normally or URL-encoded. For example, the following queries will return the same data.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCards'
+      tags:
+        - Cards
+      parameters:
+        - name: name
+          in: path
+          description: string name of the card
+          required: false
+          example: "Clefable"
+          schema:
+            type: string
+        - name: set_id
+          in: path
+          description: 	integer id of the set the card is in
+          required: false
+          example: 10
+          schema:
+            type: integer
+        - name: illustrator
+          in: path
+          description: string name of the illustrator/artist
+          required: false
+          example: "Shigenori%20Negishi"
+          schema:
+            type: string
+        - name: type
+          in: path
+          description: the pokemon's type
+          required: false
+          example: "Fighting"
+          schema:
+            type: string
+        - name: p_no
+          in: path
+          description: string printed number
+          required: false
+          example: "20"
+          schema:
+            type: string
+        - name: uuid
+          in: path
+          description: integer cards' UUID
+          required: false
+          schema:
+            type: string
+        - name: rarity
+          in: path
+          description: the cards' rarity
+          required: false
+          schema:
+          type: string
+        - name: subtype
+          in: path
+          description: the cards' rarity
+          required: false
+          schema:
+            type: string
+        - name: type
+          in: path
+          description: the type the pokemon is
+          required: false
+          schema:
+            type: string
+        - name: set_code
+          in: path
+          description: the set code of the set that the card belongs to
+          required: false
+          schema:
+            type: string
+  /set/{id}:
+    get:
+      summary: Get a set
+      operationId: getSet
+      description: Get a single set's information based on its unique identifier.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonSet'
+      tags:
+        - Set
+      parameters:
+        - name: id
+          in: path
+          description: The id of the set.
+          required: true
+          example: 1
+          schema:
+            type: integer
+  /set/uuid/{uuid}:
+    get:
+      summary: Get a set by uuid
+      operationId: getSetUuid
+      description: Get a single set's information based on its uuid.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonSet'
+      tags:
+        - Set
+      parameters:
+        - name: uuid
+          in: path
+          description: The uuid of the set.
+          required: true
+          schema:
+            type: string
+  /set:
+    get:
+      summary: Get all sets
+      operationId: getSets
+      description: Get all sets and their information.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PokemonSet'
+      tags:
+        - Set
+  /artists:
+    get:
+      summary: Get all artists
+      operationId: getArtists
+      description: Get all card artists
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: [ "tetsuya koizumi","Rianti Hidayat", "Hironobu Yoshida","DOM","kanahei","D.A.G Inc.","Hideaki Hakozaki","Yukiko Baba", "..."]
+      tags:
+        - Other
+  /subtypes:
+    get:
+      summary: Get all subtypes
+      operationId: getSubtypes
+      description: Get all card subtypes
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: [
+                    "Single Strike",
+                    "Stage 2",
+                    "Supporter",
+                    "Rapid Strike Trainer",
+                    "Trainer ?",
+                    "d",
+                    "Hisuian",
+                    "Basic",
+                    "Full Art",
+                    "Shining",
+                    "..."
+                  ]
+      tags:
+        - Other
+  /rarities:
+    get:
+      summary: Get all rarities
+      operationId: getRarities
+      description: Get all card rarities
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: [
+                    "LEGEND",
+                    "Prism Rare",
+                    "Rare",
+                    "Rare Shining",
+                    "Super Rare",
+                    "Ultra Rare",
+                    "Character Rare",
+                    "None",
+                    "Rare Holo LV.X",
+                    "Shiny",
+                    "Shiny Super Rare",
+                    "..."
+                  ]
+      tags:
+        - Other
+components:
+  schemas:
+    PokemonCard:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 11002
+        setData:
+          type: object
+          properties:
+            name:
+              type: string
+              example: "Dragon Blade"
+              description: "The set name."
+            printedTotal:
+              type: integer
+              example: 67
+              description: "The number of cards in the set that is printed on the card. This differs from the set's total in sets with Secret Rare cards."
+            total:
+              type: integer
+              example: 90
+              description: "The total number of cards in the set."
+            year:
+              type: string
+              example: "None"
+              description: "The year the set was released."
+            set_url:
+              type: string
+              format: "url"
+              example: "https://www.tcgcollector.com/cards/jp/blue-sky-stream"
+              description: "The URL to a page which has more information about the set."
+            image_url:
+              type: string
+              format: "url"
+              example: "https://content.tcgcollector.com/content/images/a3/cc/27/a3cc27411c1f1b89728a129ccc1ffcbc2a698855b5966375ce61a0298c77df48.png"
+              description: "A URL to the official set's image."
+        name:
+          type: string
+          example: "Serperior"
+          description: "The name of the card."
+        types:
+          type: array
+          items:
+            type: string
+            example: "Grass"
+          description: "The energy type the card is."
+        hp:
+          type: integer
+          example: 130
+          description: "The amount of HP the card has. If it does not have hp, then the value will be -1."
+        evolvesFrom:
+          type: string
+          example: "Servine"
+          description: "If the card evolves from another card, this field will denote the name of the pre-evolution."
+        effect:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                example: "Royal Heal"
+              text:
+                type: string
+                example: "At any time between turns, heal 10 damage from each of your Pokémon."
+              type:
+                type: string
+                example: "Ability"
+          description: "Describes the card's effect. Mainly for Trainers and Special Energies."
+        attacks:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                example: "Leaf Tornado"
+              cost:
+                type: array
+                items:
+                  type: string
+                  example: "Colorless"
+              convertedEnergyCost:
+                type: integer
+                example: 2
+              damage:
+                type: string
+                example: "60"
+              text:
+                type: string
+                example: "Move as many Grass Energy attached to your Pokémon to your other Pokémon in any way you like."
+        rules:
+          type: array
+          items:
+            type: string
+            example: "none"
+          description: "Describes rules the card is bound to. Mainly for cards with a Rule Box and certain Trainers."
+        weaknesses:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: "Fire"
+              value:
+                type: string
+                example: "x2"
+          description: "The type of energy the card is weak to. Does not include weakness modifier, only the type."
+        retreatCost:
+          type: array
+          items:
+            type: string
+            example: "Colorless"
+          description: "The amount of energy required to retreat."
+        convertedRetreatCost:
+          type: integer
+          example: 1
+        supertype:
+          type: string
+          example: "Pokémon"
+        subtypes:
+          type: array
+          items:
+            type: string
+            example: "Fighting"
+        rarity:
+          type: string
+          example: "Ultra Rare"
+          description: "The rarity of the card."
+        cardLegalities:
+          type: object
+          properties:
+            Unlimited:
+              type: string
+              example: "True"
+            Standard:
+              type: string
+              example: "False"
+            Expanded:
+              type: string
+              example: "False"
+        artist:
+          type: string
+          example: "None"
+          description: "The card art's illustrator."
+        imageUrl:
+          type: string
+          format: url
+          example: "https://content.tcgcollector.com/content/images/c9/79/fd/c979fde3902d4f4bf01de14245acd37f8bf2949fba61265f3950f0b7a22a6988.jpg"
+          description: "The url pointing to the card's image. If there is no card image, then this will instead point to https://assets.tcgcollector.com/build/images/default-card-image.789f6232.png."
+        cardUrl:
+          type: string
+          format: url
+          example: "https://www.tcgcollector.com/cards/34489/eelektross-eevee-heroes-034-069"
+          description: "The URL which leads to the original card URL data."
+        sequenceNumber:
+          type: integer
+          example: 34
+          description: "The sequential number of the card (applicable to Secret Rares)."
+        printedNumber:
+          type: string
+          example: "34"
+          description: "The number printed on the card, will be the same as sequenceNumber almost always. Is relevant for Promotional cards such as SWSH001"
+    PokemonCards:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/PokemonCard'
+        page:
+          type: integer
+          example: 1
+        pageSize:
+          type: integer
+          example: 1
+        count:
+          type: integer
+          example: 1
+        totalCount:
+          type: integer
+          example: 1
+    PokemonSet:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        uuid:
+          type: string
+          example: "72218005"
+        name:
+          type: string
+          example: "Blue Sky Stream"
+          description: "The name of the set."
+        source_url:
+          type: string
+          format: "url"
+          example: "https://www.tcgcollector.com/cards/jp/blue-sky-stream"
+          description: "The URL to a page which has more information about the set."
+        image_url:
+          type: string
+          format: "url"
+          example: "https://content.tcgcollector.com/content/images/a3/cc/27/a3cc27411c1f1b89728a129ccc1ffcbc2a698855b5966375ce61a0298c77df48.png"
+          description: "A URL to the official set's image."
+        language:
+          type: string
+          example: "JPN"
+          description: "The language that the cards in the set are printed in."
+        year:
+          type: string
+          example: "2022"
+          description: "The year the set was released."
+        date:
+          type: string
+          example: "None"
+        card_count:
+          type: integer
+          example: 127
+          description: "The total number of cards in the set."
+        printed_count:
+          type: string
+          example: "127"
+          description: "The number of cards in the set that is printed on the card. This differs from the set's total in sets with Secret Rare cards."
+        set_code:
+          type: string
+          example: "s7r"
+          description: "The shorthand code for the set."
+tags:
+  - name: Cards
+    description: >-
+      All card related API endpoints
+  - name: Sets
+    description: >-
+      All set related API endpoints    
+  - name: -Other
+    description: >-
+      Endpoints not related to cards or sets   

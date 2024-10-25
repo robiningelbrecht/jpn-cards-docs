@@ -1,0 +1,251 @@
+---
+id: get-set
+title: "Get a set"
+description: "Get a single set's information based on its unique identifier."
+sidebar_label: "Get a set"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVttu20YQ/ZUFX9oCtigxsXV5qgsEadogMSTnKTCC1XIork1ymd2lFELQv+cMSblixShA6xcvZ+dy5sxltQ9MSVZ6bYp3cbAINuRX5IOrICanrC75AuK35IUUThebjIQj/4sTukiMzRtLsZaOYoGD9k5Uhf5akdAxFV4nmuwI7iy50hSOXLDYB9F4zP/6IT7+DTVlCg8zvpVlmWnV+A+fHKvsA6dSyiWffF0SjMz6iRTDLS3n4XUbQMcnOhouN2ShRN9kXmaQTQ5XQVX1tJy3yO5UKZhG0WQ2Ht8E0C5kTpe1/8iQ9Oq5FitvSeZnFD6kJNiLMInwacPiiD07U1lFXyqbDflvOYaE70/Dpd6XbhGGu91u5NVGmSwDE8aOlMlDJW3swqcyXAPUtXuur92PQX1avhfeoLyl3JDYpVqlIpVO5MZSr8pybSrfw65zmPxn6F2xB+C3F2Hj3oXyVahUGE1xUCqavp5M1CSZrGfzaTSTk2iuFL4TtVaRvJ3PZjc365v57e2r6Y2i24kcR/OZmk7j5PVsVDbA+hTcHQngxEySaKVlduxxBtBkmsliU+Hjcg/8df9hkOKjNWLIlsGmQmD3SKeQILu03KsxxE3MmqS9HC8aR9FgQDZ9cb1DMS1lxEPaOI6l/0kiH0xBrMkwvyhTtSN5YaCi6RAMbzy4LKp8TZb7/t9ZN2i6rM/CDMBCmOG5+mGElnHtXrg1xQv/I/GQ4ibWSULWicSa/GiG2rfY4QmfTuy0T8WKlIXLJdeqCdQOMHlgj3/CqJvaQeguNRYYi1iwD4GhOSEH3r32jf29eabcFLycD/yHG7nBsvscsOgRNEqL7eKRCYT7bmHxJsSYcrBS+nQQgY57K4l39ddKW8J29Lai0ypfnW/gYzMcDsCA+KnpnhFeyhxyEYTwG+51fAiYLLs9Qmz2Rm+RPZXFdUssr4HteW+/11v05SOnlJgGRUcPJu/67v6dWBJqSYUimHKgxixqHxapmvbqmDlarKqyRAmg3+KRca6L30+RNCPTgxGNxn8izJWoTYXWyDKRaFRQ4sA8FqTIOWnr3vrEimGyLGC07YTFL8pMelZBf5oNCsi6Cn5qUfFr27hbvlk9CEAdiY+wYMxQMDt0Lm0p43fPNQtccVSxlVabiie+fVkct/xpqHbojPO5LE746J7488d//8+r/P9/B3Rd4+mbDwEInXnoiN937fI5aDEs0LoodAqgLNzv2fknmx0OLIZnW0OOIycs19wF6KlYOz6jBxOZObqQyq/Lrs1/E4NTMIi0E8qi5v6SeF3xheMz1e2wHR6hlZKMMRKMp724Q2lKf2Jy9uOmNz1v3zxgnr4D4stB2w==
+sidebar_class_name: "get api-method"
+info_path: pokemon-api/jpn-api-reference
+custom_edit_url: null
+hide_send_button: true
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a set"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/set/{id}"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a single set's information based on its unique identifier.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"id","in":"path","description":"The id of the set.","required":true,"example":1,"schema":{"type":"integer"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"id"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"uuid"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"72218005"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"name"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"Blue Sky Stream","description":"The name of the set."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"source_url"}
+                        required={false}
+                        schemaName={"url"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","format":"url","example":"https://www.tcgcollector.com/cards/jp/blue-sky-stream","description":"The URL to a page which has more information about the set."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"image_url"}
+                        required={false}
+                        schemaName={"url"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","format":"url","example":"https://content.tcgcollector.com/content/images/a3/cc/27/a3cc27411c1f1b89728a129ccc1ffcbc2a698855b5966375ce61a0298c77df48.png","description":"A URL to the official set's image."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"language"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"JPN","description":"The language that the cards in the set are printed in."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"year"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"2022","description":"The year the set was released."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"date"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"None"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"card_count"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":127,"description":"The total number of cards in the set."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"printed_count"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"127","description":"The number of cards in the set that is printed on the card. This differs from the set's total in sets with Secret Rare cards."}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"set_code"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","example":"s7r","description":"The shorthand code for the set."}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"id\": 1,\n  \"uuid\": \"72218005\",\n  \"name\": \"Blue Sky Stream\",\n  \"source_url\": \"https://www.tcgcollector.com/cards/jp/blue-sky-stream\",\n  \"image_url\": \"https://content.tcgcollector.com/content/images/a3/cc/27/a3cc27411c1f1b89728a129ccc1ffcbc2a698855b5966375ce61a0298c77df48.png\",\n  \"language\": \"JPN\",\n  \"year\": \"2022\",\n  \"date\": \"None\",\n  \"card_count\": 127,\n  \"printed_count\": \"127\",\n  \"set_code\": \"s7r\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
