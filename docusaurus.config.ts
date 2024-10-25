@@ -193,7 +193,9 @@ const config: Config = {
         } satisfies Plugin.PluginOptions,
       },
     ],
-    require.resolve("docusaurus-lunr-search"),
+    [ require.resolve('docusaurus-lunr-search'), {
+      excludeRoutes: ['v1/**/*']
+    }]
   ],
 
   themes: ["docusaurus-theme-openapi-docs"],
