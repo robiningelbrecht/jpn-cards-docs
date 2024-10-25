@@ -16,6 +16,7 @@ servers:
 paths:
   /card/id={id}:
     get:
+      deprecated: true
       summary: Get a card
       operationId: getCard
       description: Get a single card's information based on its unique identifier.
@@ -38,6 +39,7 @@ paths:
             type: integer
   /card/?name={name}&set_id={set_id}&illustrator={illustrator}&type={type}&p_no={p_no}:
     get:
+      deprecated: true
       summary: Get multiple cards
       operationId: getMultipleCards
       description: >-
@@ -92,6 +94,7 @@ paths:
             type: string
   /set/{id}:
     get:
+      deprecated: true
       summary: Get a set
       operationId: getSet
       description: Get a single set's information based on its unique identifier.
@@ -114,6 +117,7 @@ paths:
             type: integer
   /set:
     get:
+      deprecated: true
       summary: Get all sets
       operationId: getSets
       description: Get all sets and their information.

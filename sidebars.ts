@@ -20,6 +20,12 @@ const pokemonApiVersions = require("./docs/pokemon-api/versions.json");
 const sidebars: SidebarsConfig = {
   pokemonApiV2: [
     {
+      type: "html",
+      defaultStyle: true,
+      value: versionSelector(pokemonApiVersions),
+      className: "version-button",
+    },
+    {
       type: "category",
       label: "API Reference",
       link: {
@@ -28,15 +34,15 @@ const sidebars: SidebarsConfig = {
         slug: "/pokemon-api",
       },
       items: require("./docs/pokemon-api/sidebar.ts"),
-    },
+    }
+  ],
+  pokemonApiV1: [
     {
       type: "html",
       defaultStyle: true,
       value: versionSelector(pokemonApiVersions),
       className: "version-button",
-    }
-  ],
-  pokemonApiV1: [
+    },
     {
       type: "category",
       label: "API Reference",
@@ -46,12 +52,6 @@ const sidebars: SidebarsConfig = {
         slug: "/pokemon-api/v1",
       },
       items: require("./docs/pokemon-api/1.0/sidebar.ts"),
-    },
-    {
-      type: "html",
-      defaultStyle: true,
-      value: versionSelector(pokemonApiVersions),
-      className: "version-button",
     }
   ],
 };
