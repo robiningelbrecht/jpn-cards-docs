@@ -17,8 +17,7 @@
     "gen-api-docs:version": "docusaurus gen-api-docs:version",
     "clean-api-docs:version": "docusaurus clean-api-docs:version",
     "clean-and-generate-all": "docusaurus clean-api-docs pokemon_api && docusaurus clean-api-docs:version pokemon_api:all && docusaurus gen-api-docs:version pokemon_api:all && docusaurus gen-api-docs pokemon_api",
-    "clean-and-generate-current": "docusaurus clean-api-docs pokemon_api && docusaurus gen-api-docs pokemon_api",
-    "lint-openapi": "vacuum lint static/lochting-api.yaml"
+    "clean-and-generate-current": "docusaurus clean-api-docs pokemon_api && docusaurus gen-api-docs pokemon_api"
   },
   "dependencies": {
     "@docusaurus/core": "3.5.2",
