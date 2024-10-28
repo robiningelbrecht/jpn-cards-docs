@@ -10,7 +10,7 @@ import ssrTemplate from "./src/theme/ssr.html.template";
 const config: Config = {
   title: "JPN-API",
   url: "https://www.jpn-cards.com",
-  baseUrl: "/",
+  baseUrl: "/jpn-cards-docs/",
   onBrokenLinks: "throw",
   onBrokenAnchors: "throw",
   onBrokenMarkdownLinks: "throw",
