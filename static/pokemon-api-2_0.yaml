@@ -16,6 +16,7 @@ servers:
 paths:
   /card/id={id}:
     get:
+      deprecated: true
       summary: Get a card
       operationId: getCard
       description: Get a single card's information based on its unique identifier.
@@ -38,6 +39,7 @@ paths:
             type: integer
   /card/?name={name}&set_id={set_id}&illustrator={illustrator}&type={type}&p_no={p_no}&uuid={uuid}&rarity={rarity}&subtype={subtype}&type={type}&set_code={set_code}:
     get:
+      deprecated: true
       summary: Get multiple cards
       operationId: getMultipleCards
       description: >-
@@ -120,6 +122,7 @@ paths:
             type: string
   /set/{id}:
     get:
+      deprecated: true
       summary: Get a set
       operationId: getSet
       description: Get a single set's information based on its unique identifier.
@@ -142,6 +145,7 @@ paths:
             type: integer
   /set/uuid/{uuid}:
     get:
+      deprecated: true
       summary: Get a set by uuid
       operationId: getSetUuid
       description: Get a single set's information based on its uuid.
@@ -163,6 +167,7 @@ paths:
             type: string
   /set:
     get:
+      deprecated: true
       summary: Get all sets
       operationId: getSets
       description: Get all sets and their information.
@@ -179,6 +184,7 @@ paths:
         - Set
   /artists:
     get:
+      deprecated: true
       summary: Get all artists
       operationId: getArtists
       description: Get all card artists
@@ -196,6 +202,7 @@ paths:
         - Other
   /subtypes:
     get:
+      deprecated: true
       summary: Get all subtypes
       operationId: getSubtypes
       description: Get all card subtypes
@@ -225,6 +232,7 @@ paths:
         - Other
   /rarities:
     get:
+      deprecated: true
       summary: Get all rarities
       operationId: getRarities
       description: Get all card rarities

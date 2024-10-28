@@ -175,13 +175,13 @@ const config: Config = {
               "2.0": {
                 specPath: "static/pokemon-api-2_0.yaml",
                 outputDir: "docs/pokemon-api/2.0", // No trailing slash
-                label: "2.0",
+                label: "2.0 (deprecated)",
                 baseUrl: "/pokemon-api/v2", // Leading slash is important
               },
               "1.0": {
                 specPath: "static/pokemon-api-1_0.yaml",
                 outputDir: "docs/pokemon-api/1.0", // No trailing slash
-                label: "1.0",
+                label: "1.0 (deprecated)",
                 baseUrl: "/pokemon-api/v1", // Leading slash is important
               },
             },
