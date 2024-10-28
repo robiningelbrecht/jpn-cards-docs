@@ -194,7 +194,8 @@ const config: Config = {
       },
     ],
     [ require.resolve('docusaurus-lunr-search'), {
-      excludeRoutes: ['v1/**/*']
+      excludeRoutes: ['pokemon-api/1.0/**/*'],
+      highlightResult: true,
     }]
   ],
 
