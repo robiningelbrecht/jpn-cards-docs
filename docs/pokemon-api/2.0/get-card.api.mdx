@@ -1,0 +1,748 @@
+---
+id: get-card
+title: "Get a card"
+description: "Get a single card's information based on its unique identifier."
+sidebar_label: "Get a card"
+hide_title: true
+hide_table_of_contents: true
+api: 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
+sidebar_class_name: "get api-method"
+info_path: pokemon-api/2.0/jpn-api-reference
+custom_edit_url: null
+hide_send_button: true
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get a card"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/card/id={id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get a single card's information based on its unique identifier.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"id","in":"path","description":"The id of the card.","required":true,"example":267,"schema":{"type":"integer"},"enumDescriptions":[]}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                data
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"id"}
+                              required={false}
+                              schemaName={"integer"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"integer","example":11002}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      setData
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <SchemaItem
+                                    collapsible={false}
+                                    name={"name"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Dragon Blade","description":"The set name."}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"printedTotal"}
+                                    required={false}
+                                    schemaName={"integer"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"integer","example":67,"description":"The number of cards in the set that is printed on the card. This differs from the set's total in sets with Secret Rare cards."}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"total"}
+                                    required={false}
+                                    schemaName={"integer"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"integer","example":90,"description":"The total number of cards in the set."}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"year"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"None","description":"The year the set was released."}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"set_url"}
+                                    required={false}
+                                    schemaName={"url"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","format":"url","example":"https://www.tcgcollector.com/cards/jp/blue-sky-stream","description":"The URL to a page which has more information about the set."}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"image_url"}
+                                    required={false}
+                                    schemaName={"url"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","format":"url","example":"https://content.tcgcollector.com/content/images/a3/cc/27/a3cc27411c1f1b89728a129ccc1ffcbc2a698855b5966375ce61a0298c77df48.png","description":"A URL to the official set's image."}}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Serperior","description":"The name of the card."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"types"}
+                              required={false}
+                              schemaName={"string[]"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"array","items":{"type":"string","example":"Grass"},"description":"The energy type the card is."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"hp"}
+                              required={false}
+                              schemaName={"integer"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"integer","example":130,"description":"The amount of HP the card has. If it does not have hp, then the value will be -1."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"evolvesFrom"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Servine","description":"If the card evolves from another card, this field will denote the name of the pre-evolution."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      effect
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    Describes the card's effect. Mainly for Trainers and Special Energies.
+                                    
+                                    
+                                  </div><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"name"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Royal Heal"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"text"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"At any time between turns, heal 10 damage from each of your Pokémon."}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"type"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Ability"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      attacks
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"name"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Leaf Tornado"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"cost"}
+                                    required={false}
+                                    schemaName={"string[]"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"array","items":{"type":"string","example":"Colorless"}}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"convertedEnergyCost"}
+                                    required={false}
+                                    schemaName={"integer"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"integer","example":2}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"damage"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"60"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"text"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Move as many Grass Energy attached to your Pokémon to your other Pokémon in any way you like."}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"rules"}
+                              required={false}
+                              schemaName={"string[]"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"array","items":{"type":"string","example":"none"},"description":"Describes rules the card is bound to. Mainly for cards with a Rule Box and certain Trainers."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      weaknesses
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    The type of energy the card is weak to. Does not include weakness modifier, only the type.
+                                    
+                                    
+                                  </div><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"type"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"Fire"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"value"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"x2"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"retreatCost"}
+                              required={false}
+                              schemaName={"string[]"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"array","items":{"type":"string","example":"Colorless"},"description":"The amount of energy required to retreat."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"convertedRetreatCost"}
+                              required={false}
+                              schemaName={"integer"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"integer","example":1}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"supertype"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Pokémon"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"subtypes"}
+                              required={false}
+                              schemaName={"string[]"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"array","items":{"type":"string","example":"Fighting"}}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"rarity"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"Ultra Rare","description":"The rarity of the card."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      cardLegalities
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <SchemaItem
+                                    collapsible={false}
+                                    name={"Unlimited"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"True"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Standard"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"False"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"Expanded"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","example":"False"}}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"artist"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"None","description":"The card art's illustrator."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"imageUrl"}
+                              required={false}
+                              schemaName={"url"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","format":"url","example":"https://content.tcgcollector.com/content/images/c9/79/fd/c979fde3902d4f4bf01de14245acd37f8bf2949fba61265f3950f0b7a22a6988.jpg","description":"The url pointing to the card's image. If there is no card image, then this will instead point to https://assets.tcgcollector.com/build/images/default-card-image.789f6232.png."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"cardUrl"}
+                              required={false}
+                              schemaName={"url"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","format":"url","example":"https://www.tcgcollector.com/cards/34489/eelektross-eevee-heroes-034-069","description":"The URL which leads to the original card URL data."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"sequenceNumber"}
+                              required={false}
+                              schemaName={"integer"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"integer","example":34,"description":"The sequential number of the card (applicable to Secret Rares)."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"printedNumber"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","example":"34","description":"The number printed on the card, will be the same as sequenceNumber almost always. Is relevant for Promotional cards such as SWSH001"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"page"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"pageSize"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"count"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":1}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalCount"}
+                        required={false}
+                        schemaName={"integer"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","example":1}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"data\": [\n    {\n      \"id\": 11002,\n      \"setData\": {\n        \"name\": \"Dragon Blade\",\n        \"printedTotal\": 67,\n        \"total\": 90,\n        \"year\": \"None\",\n        \"set_url\": \"https://www.tcgcollector.com/cards/jp/blue-sky-stream\",\n        \"image_url\": \"https://content.tcgcollector.com/content/images/a3/cc/27/a3cc27411c1f1b89728a129ccc1ffcbc2a698855b5966375ce61a0298c77df48.png\"\n      },\n      \"name\": \"Serperior\",\n      \"types\": [\n        \"Grass\"\n      ],\n      \"hp\": 130,\n      \"evolvesFrom\": \"Servine\",\n      \"effect\": [\n        {\n          \"name\": \"Royal Heal\",\n          \"text\": \"At any time between turns, heal 10 damage from each of your Pokémon.\",\n          \"type\": \"Ability\"\n        }\n      ],\n      \"attacks\": [\n        {\n          \"name\": \"Leaf Tornado\",\n          \"cost\": [\n            \"Colorless\"\n          ],\n          \"convertedEnergyCost\": 2,\n          \"damage\": \"60\",\n          \"text\": \"Move as many Grass Energy attached to your Pokémon to your other Pokémon in any way you like.\"\n        }\n      ],\n      \"rules\": [\n        \"none\"\n      ],\n      \"weaknesses\": [\n        {\n          \"type\": \"Fire\",\n          \"value\": \"x2\"\n        }\n      ],\n      \"retreatCost\": [\n        \"Colorless\"\n      ],\n      \"convertedRetreatCost\": 1,\n      \"supertype\": \"Pokémon\",\n      \"subtypes\": [\n        \"Fighting\"\n      ],\n      \"rarity\": \"Ultra Rare\",\n      \"cardLegalities\": {\n        \"Unlimited\": \"True\",\n        \"Standard\": \"False\",\n        \"Expanded\": \"False\"\n      },\n      \"artist\": \"None\",\n      \"imageUrl\": \"https://content.tcgcollector.com/content/images/c9/79/fd/c979fde3902d4f4bf01de14245acd37f8bf2949fba61265f3950f0b7a22a6988.jpg\",\n      \"cardUrl\": \"https://www.tcgcollector.com/cards/34489/eelektross-eevee-heroes-034-069\",\n      \"sequenceNumber\": 34,\n      \"printedNumber\": \"34\"\n    }\n  ],\n  \"page\": 1,\n  \"pageSize\": 1,\n  \"count\": 1,\n  \"totalCount\": 1\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,8 +1,13 @@
 [
   {
+    "version": "3.0",
+    "label": "3.0",
+    "baseUrl": "/pokemon-api"
+  },
+  {
     "version": "2.0",
     "label": "2.0",
-    "baseUrl": "/pokemon-api"
+    "baseUrl": "/pokemon-api/v2"
   },
   {
     "version": "1.0",

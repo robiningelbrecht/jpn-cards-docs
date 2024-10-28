@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: JPN-API Reference
-  version: 1.0
+  version: '1.0'
   contact:
     name: JPN-API Support
     url: admin@jpn-cards.co
