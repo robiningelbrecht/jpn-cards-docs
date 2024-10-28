@@ -10,7 +10,7 @@ import ssrTemplate from "./src/theme/ssr.html.template";
 const config: Config = {
   title: "JPN-API",
   url: "https://www.jpn-cards.com",
-  baseUrl: "/jpn-cards-docs/",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenAnchors: "throw",
   onBrokenMarkdownLinks: "throw",
@@ -24,12 +24,7 @@ const config: Config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.ts"),
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
-          routeBasePath: "/",
-          /*lastVersion: '2.0',
-          includeCurrentVersion: false,
-          versions: {
-
-          },*/
+          routeBasePath: "/"
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -65,12 +60,7 @@ const config: Config = {
           label: "Donate",
           position: "left",
           to: "https://ko-fi.com/jpnapi",
-        },
-        /*{
-          type: 'docsVersionDropdown',
-          position: 'right',
-          dropdownActiveClassDisabled: true,
-        }*/
+        }
       ],
     },
     announcementBar: {
