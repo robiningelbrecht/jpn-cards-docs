@@ -16,7 +16,7 @@ servers:
 paths:
   /cards/{id}.json:
     get:
-      summary: Get a card
+      summary: Get a card by id
       operationId: getCard
       description: Get a single card's information based on its unique identifier.
       responses:
@@ -82,7 +82,7 @@ paths:
             type: string
   /cards/set/{setId}.json:
     get:
-      summary: Get cards by set
+      summary: Get cards by set id
       operationId: getCardsBySetId
       description: >-
         Get one or more cards based on the card's set id.

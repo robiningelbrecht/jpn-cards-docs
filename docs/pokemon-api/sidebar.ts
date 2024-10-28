@@ -17,7 +17,7 @@ const sidebar: SidebarsConfig = {
         {
           type: "doc",
           id: "pokemon-api/get-card",
-          label: "Get a card",
+          label: "Get a card by id",
           className: "api-method get",
         },
         {
@@ -35,7 +35,7 @@ const sidebar: SidebarsConfig = {
         {
           type: "doc",
           id: "pokemon-api/get-cards-by-set-id",
-          label: "Get cards by set",
+          label: "Get cards by set id",
           className: "api-method get",
         },
         {
