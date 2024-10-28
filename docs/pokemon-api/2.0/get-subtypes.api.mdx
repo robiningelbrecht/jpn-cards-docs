@@ -1,13 +1,13 @@
 ---
-id: get-artists
-title: "Get all artists"
-description: "Get all card artists"
-sidebar_label: "Get all artists"
+id: get-subtypes
+title: "Get all subtypes"
+description: "Get all card subtypes"
+sidebar_label: "Get all subtypes"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1U01v2zAM/SuCzqkTrLeclqFFkn2lSLtDUeTAyEys2pY0iU7qGv7vI910S7vNB1um3uOjyKdO+4ARyHq3zPVU75FmkWyipEc6x2SiDbLJW3MkBVWlDMRcwW9QxBS8S5j0tNMfJhP5vCWuvjDMeEfoSHYhhMqaQXP8mATS6WQKrEFW1AZkEsQILfMsYZ3O4omidXvewCeoQ8WhB01IqWlBld4+N7XlzbUFR1YtbA4tEAcWNnrnt42696ngKIeuVt/4XYKDAoVzlc2yuVo6kw34HKHkDFD6Z15w6L4pbenVJ9gKO8syvemHZ6QJ9kkKWVGBUW9GukYq/KmfDA5ABf+MT13LhlOPdMJ4wCjMTjexYkRBFNJ0PD4ej9ljcBfS65QZX48Pl38N5Ks9oO5ZzbqdH1pkSRqiP998v5jdLNUadxjRGWSqCL3QLrPJaR5ghnk4qM9Zt00IPkrZLzVBXlv38bwa3b8vZcE6I9X6Rh0tW2RnXT54hfuhHBpMCWKrpM5YD4NX5PmX2HqGmEOF8k1UoQISiArR7yPUgjWcp1VN4qkP6dbXt3eK68zUihlSMAP8MakcD1iJm5MkByOq6gDR+iYpdikLcEix9rlUJocJPlEN7qwZr2aHf1+G7o+f/3cvTn4lfKIxi1knQkNHu5MfHvQbP/AgC65D4l23hYQ/YtX3Ev7ZYGw5zks5D2wH2284X4GQs+PEQCUyRM/42EFmd4CqGe7R+8vWn9tzfn2n+/4XXm9e3g==
+api: eJx1U8Fu2zAM/RVB59Qpcuxl64Cu7TasRZKdihxYmYnV2pJG0UkDw/8+0nFXr0MNGKbJRz7qkepsiYnQAWNpL5hanNmYkIB9DLfisjvkVfvIx4TZzgSdHfmkUYldIxuoa+OASpPfUIQ5xZDFvujs4vxcP/9m3n0XmIuBMbBGIaXau4F1/pQV0tnsKmxALa0rSUAER8nzjE2e+DOTDzsJ4As0qRbXg12Jp0azktAzSmjFsEOzUKtNKRIjib2E5MsRZNYEPgzu0TKf9MTy3vjceghifYHsnXy/tnLsS2KtV/lwoi+Kwm764ZlZ4cvayB1XUnMzsw1yFUdFBZyAK/mZT2TLSHskzepsS7VEK+aUL+bzw+FQPKVwpkLnwsVmvl/8N40ffo+2FyYftnGQx7OKYb/d/zy7vL81S9wiYXCqhxKd0hbF+TgLcMMsAjTTrFEvwZx6grLx4fO0G9u/b+VGeGbmGFtz8CLU1odyWBTRwgR0mDPQ0Wif1AxDNxzlV4YiPUgOVya2ZFINrBCTKO4IGsU6qXM0bRbJh3LLq9XaSJ+FuZMMbVgA8ZBNiXusdZezFgenrGYP5GObjWyoEIjLCPeUqtDDpJi5gTAR43XT8wdXoXtb5g9vxbitjC88FzoflGrQtBu34cH+hcsYK+lCfV33CBl/Ud336v7dIh3FL6aeBh6Hhd9IrQqhlF3T9XlGgdhLOXTSye2hbocb9P6a9dPFvL5a277/A+ODY6I=
 sidebar_class_name: "get api-method"
-info_path: pokemon-api/jpn-api-reference
+info_path: pokemon-api/2.0/jpn-api-reference
 custom_edit_url: null
 hide_send_button: true
 ---
@@ -28,21 +28,25 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Get all artists"}
+  children={"Get all subtypes"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"get"}
-  path={"/artists.json"}
+  path={"/subtypes"}
   context={"endpoint"}
 >
   
 </MethodEndpoint>
 
+:::caution deprecated
 
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
 
-Get all card artists
+:::
+
+Get all card subtypes
 
 <div>
   <div>
@@ -124,7 +128,7 @@ Get all card artists
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"[\n  [\n    \"tetsuya koizumi\",\n    \"Rianti Hidayat\",\n    \"Hironobu Yoshida\",\n    \"DOM\",\n    \"kanahei\",\n    \"D.A.G Inc.\",\n    \"Hideaki Hakozaki\",\n    \"Yukiko Baba\",\n    \"...\"\n  ]\n]"}
+                    responseExample={"[\n  [\n    \"Single Strike\",\n    \"Stage 2\",\n    \"Supporter\",\n    \"Rapid Strike Trainer\",\n    \"Trainer ?\",\n    \"d\",\n    \"Hisuian\",\n    \"Basic\",\n    \"Full Art\",\n    \"Shining\",\n    \"...\"\n  ]\n]"}
                     language={"json"}
                   >
                     

@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: JPN-API Reference
-  version: '2.0'
+  version: '3.0'
   contact:
     name: JPN-API Support
     url: admin@jpn-cards.co
@@ -11,13 +11,12 @@ info:
     access various resources on our platform.
 servers:
   -
-    url: https://www.jpn-cards.com/v2
+    url: https://www.jpn-cards.com/v3
     description: Live
 paths:
-  /card/id={id}:
+  /cards/{id}.json:
     get:
-      deprecated: true
-      summary: Get a card
+      summary: Get a card by id
       operationId: getCard
       description: Get a single card's information based on its unique identifier.
       responses:
@@ -26,7 +25,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PokemonCards'
+                $ref: '#/components/schemas/PokemonCard'
       tags:
         - Cards
       parameters:
@@ -37,14 +36,33 @@ paths:
           example: 267
           schema:
             type: integer
-  /card/?name={name}&set_id={set_id}&illustrator={illustrator}&type={type}&p_no={p_no}&uuid={uuid}&rarity={rarity}&subtype={subtype}&type={type}&set_code={set_code}:
+  /cards/{uuid}.json:
     get:
-      deprecated: true
-      summary: Get multiple cards
-      operationId: getMultipleCards
+      summary: Get a card by uuid
+      operationId: getCardByUuid
+      description: Get a single card's information based on its uuid.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCard'
+      tags:
+        - Cards
+      parameters:
+        - name: uuid
+          in: path
+          description: The uuid of the card.
+          required: true
+          schema:
+            type: string
+  /cards/name/{name}.json:
+    get:
+      summary: Get cards by name
+      operationId: getCardsByName
       description: >-
-        Get one or more cards based on more broad metadata.
-        For values with spaces or other special characters in them, you're able to just pass it in normally or URL-encoded. For example, the following queries will return the same data.
+        Get one or more cards based on the card's name.
       responses:
         '200':
           description: OK
@@ -57,72 +75,247 @@ paths:
       parameters:
         - name: name
           in: path
+          description: name of the card
+          required: true
+          example: "Clefable"
+          schema:
+            type: string
+  /cards/set/{setId}.json:
+    get:
+      summary: Get cards by set id
+      operationId: getCardsBySetId
+      description: >-
+        Get one or more cards based on the card's set id.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCards'
+      tags:
+        - Cards
+      parameters:
+        - name: setId
+          in: path
+          description: Id of the set
+          required: true
+          example: 100
+          schema:
+            type: integer
+  /cards/set/{setCode}.json:
+    get:
+      summary: Get cards by set code
+      operationId: getCardsBySetCode
+      description: >-
+        Get one or more cards based on the card's set code.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCards'
+      tags:
+        - Cards
+      parameters:
+        - name: setCode
+          in: path
+          description: Code of the set
+          required: true
+          example: "sfa"
+          schema:
+            type: string
+  /cards/illustrator/{illustrator}.json:
+    get:
+      summary: Get cards by illustrator
+      operationId: getCardsByIllustrator
+      description: >-
+        Get one or more cards based on the card's illustrator.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCards'
+      tags:
+        - Cards
+      parameters:
+        - name: illustrator
+          in: path
+          description: Illustrator of the card
+          required: true
+          example: "Shigenori Negishi"
+          schema:
+            type: string
+  /cards/type/{type}.json:
+    get:
+      summary: Get cards by type
+      operationId: getCardsByType
+      description: >-
+        Get one or more cards based on the card's type.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCards'
+      tags:
+        - Cards
+      parameters:
+        - name: type
+          in: path
+          description: Type of the card
+          required: true
+          example: "Fighting"
+          schema:
+            type: string
+  /cards/subtype/{subtype}.json:
+    get:
+      summary: Get cards by subtype
+      operationId: getCardsBySubtype
+      description: >-
+        Get one or more cards based on the card's subtype.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCards'
+      tags:
+        - Cards
+      parameters:
+        - name: subtype
+          in: path
+          description: Subtype of the card
+          required: true
+          schema:
+            type: string
+  /cards/print-number/{print-number}.json:
+    get:
+      summary: Get cards by print number
+      operationId: getCardsByPrintNumber
+      description: >-
+        Get one or more cards based on the card's print number.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCards'
+      tags:
+        - Cards
+      parameters:
+        - name: print-number
+          in: path
+          description: Print number of the card
+          required: true
+          example: "20"
+          schema:
+            type: string
+  /cards/rarity/{rarity}.json:
+    get:
+      summary: Get cards by rarity
+      operationId: getCardsByRarity
+      description: >-
+        Get one or more cards based on the card's rarity.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCards'
+      tags:
+        - Cards
+      parameters:
+        - name: rarity
+          in: path
+          description: Rarity of the card
+          required: true
+          schema:
+            type: string
+  /cards:
+    get:
+      summary: Query cards
+      operationId: getQueryCards
+      description: >-
+        Get one or more cards based on a combination of filters
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PokemonCards'
+      tags:
+        - Cards
+      parameters:
+        - name: filters[name]
+          in: query
           description: string name of the card
           required: false
           example: "Clefable"
           schema:
             type: string
-        - name: set_id
-          in: path
+        - name: filters[setId]
+          in: query
           description: 	integer id of the set the card is in
           required: false
-          example: 10
+          example: "10"
           schema:
             type: integer
-        - name: illustrator
-          in: path
+        - name: filters[illustrator]
+          in: query
           description: string name of the illustrator/artist
           required: false
           example: "Shigenori%20Negishi"
           schema:
             type: string
-        - name: type
-          in: path
+        - name: filters[type]
+          in: query
           description: the pokemon's type
           required: false
           example: "Fighting"
           schema:
             type: string
-        - name: p_no
-          in: path
+        - name: filters[print-number]
+          in: query
           description: string printed number
           required: false
           example: "20"
           schema:
             type: string
-        - name: uuid
-          in: path
-          description: integer cards' UUID
-          required: false
-          schema:
-            type: string
-        - name: rarity
-          in: path
+        - name: filters[rarity]
+          in: query
           description: the cards' rarity
           required: false
           schema:
           type: string
-        - name: subtype
-          in: path
-          description: the cards' subtype
+        - name: filters[subtype]
+          in: query
+          description: the cards' rarity
           required: false
           schema:
             type: string
-        - name: type
-          in: path
+        - name: filters[type]
+          in: query
           description: the type the pokemon is
           required: false
           schema:
             type: string
-        - name: set_code
-          in: path
+        - name: filters[setCode]
+          in: query
           description: the set code of the set that the card belongs to
           required: false
           schema:
             type: string
-  /set/{id}:
+  /sets/{id}.json:
     get:
-      deprecated: true
       summary: Get a set
       operationId: getSet
       description: Get a single set's information based on its unique identifier.
@@ -143,9 +336,8 @@ paths:
           example: 1
           schema:
             type: integer
-  /set/uuid/{uuid}:
+  /sets/uuid/{uuid}.json:
     get:
-      deprecated: true
       summary: Get a set by uuid
       operationId: getSetUuid
       description: Get a single set's information based on its uuid.
@@ -165,9 +357,8 @@ paths:
           required: true
           schema:
             type: string
-  /set:
+  /sets.json:
     get:
-      deprecated: true
       summary: Get all sets
       operationId: getSets
       description: Get all sets and their information.
@@ -182,9 +373,8 @@ paths:
                   $ref: '#/components/schemas/PokemonSet'
       tags:
         - Set
-  /artists:
+  /artists.json:
     get:
-      deprecated: true
       summary: Get all artists
       operationId: getArtists
       description: Get all card artists
@@ -200,9 +390,8 @@ paths:
                   example: [ "tetsuya koizumi","Rianti Hidayat", "Hironobu Yoshida","DOM","kanahei","D.A.G Inc.","Hideaki Hakozaki","Yukiko Baba", "..."]
       tags:
         - Other
-  /subtypes:
+  /subtypes.json:
     get:
-      deprecated: true
       summary: Get all subtypes
       operationId: getSubtypes
       description: Get all card subtypes
@@ -230,9 +419,8 @@ paths:
                   ]
       tags:
         - Other
-  /rarities:
+  /rarities.json:
     get:
-      deprecated: true
       summary: Get all rarities
       operationId: getRarities
       description: Get all card rarities
@@ -269,35 +457,9 @@ components:
         id:
           type: integer
           example: 11002
-        setData:
-          type: object
-          properties:
-            name:
-              type: string
-              example: "Dragon Blade"
-              description: "The set name."
-            printedTotal:
-              type: integer
-              example: 67
-              description: "The number of cards in the set that is printed on the card. This differs from the set's total in sets with Secret Rare cards."
-            total:
-              type: integer
-              example: 90
-              description: "The total number of cards in the set."
-            year:
-              type: string
-              example: "None"
-              description: "The year the set was released."
-            set_url:
-              type: string
-              format: "url"
-              example: "https://www.tcgcollector.com/cards/jp/blue-sky-stream"
-              description: "The URL to a page which has more information about the set."
-            image_url:
-              type: string
-              format: "url"
-              example: "https://content.tcgcollector.com/content/images/a3/cc/27/a3cc27411c1f1b89728a129ccc1ffcbc2a698855b5966375ce61a0298c77df48.png"
-              description: "A URL to the official set's image."
+        setId:
+          type: integer
+          example: 100
         name:
           type: string
           example: "Serperior"

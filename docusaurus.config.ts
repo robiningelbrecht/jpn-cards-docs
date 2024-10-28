@@ -166,16 +166,22 @@ const config: Config = {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
             },
-            specPath: "static/pokemon-api-2_0.yaml",
+            specPath: "static/pokemon-api-3_0.yaml",
             outputDir: "docs/pokemon-api",
-            version: "2.0",
-            label: "2.0", // Current version label
+            version: "3.0",
+            label: "3.0", // Current version label
             baseUrl: "/pokemon-api", // Leading slash is important
             versions: {
+              "2.0": {
+                specPath: "static/pokemon-api-2_0.yaml",
+                outputDir: "docs/pokemon-api/2.0", // No trailing slash
+                label: "2.0 (deprecated)",
+                baseUrl: "/pokemon-api/v2", // Leading slash is important
+              },
               "1.0": {
                 specPath: "static/pokemon-api-1_0.yaml",
                 outputDir: "docs/pokemon-api/1.0", // No trailing slash
-                label: "1.0",
+                label: "1.0 (deprecated)",
                 baseUrl: "/pokemon-api/v1", // Leading slash is important
               },
             },
@@ -184,7 +190,7 @@ const config: Config = {
       },
     ],
     [ require.resolve('docusaurus-lunr-search'), {
-      excludeRoutes: ['pokemon-api/1.0/**/*']
+      excludeRoutes: ['pokemon-api/1.0/**/*', 'pokemon-api/2.0/**/*'],
     }]
   ],
 
